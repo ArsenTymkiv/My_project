@@ -1,0 +1,88 @@
+/* Header */
+.logo {
+    float: left;
+}
+nav {
+    float: right;
+}
+nav ul {
+    margin: 15px;
+    padding: 0;
+}
+nav li {
+    display: inline-block; /*один из способов разместить элементы в строку*/
+}
+.container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.container {
+
+    max-width: 1324px;
+    padding: 15px;
+    margin: 0 auto;
+}
+nav a {
+    text-decoration: none;
+    line-height: 38px;
+}
+.logo {
+    color: hotpink; /* Цвет символа */
+    text-shadow: 1px 1px 1px red,
+    2px 2px 1px cornflowerblue;
+    font-size: 45px;
+    text-decoration: underline; /*добавляем подчёркивание*/
+
+}
+
+nav{
+    color: pink; /* Цвет символа */
+    font-size: 25px;
+    word-spacing: 3px;
+    color: #000000;
+
+}
+a {
+    position: relative;
+    color: #000000; /*задаём цвет ссылки*/
+    cursor: pointer;
+    line-height: 1; /*задаём высоту строки*/
+    text-decoration: none; /*убираем подчёркивание*/
+
+}
+a:after {
+    display: block;
+    position: absolute;
+    left: 0; /*изменить на right:0;, чтобы изменить направление подчёркивания */
+    width: 0;/*задаём длинну линии до наведения курсора*/
+    height: 2px; /*задаём ширину линии*/
+    background-color: rosybrown; /*задаём цвет линии*/
+    content: "";
+    transition: width 0.3s ease-out; /*задаём время анимации*/
+}
+
+a:hover:after,
+a:focus:after {
+    width: 100%; /*устанавливаем значение 100% чтобы ссылка подчёркивалась полностью*/
+}
+
+
+body {
+
+    color: black; /* Цвет текста */
+}
+#top {
+    background: lightgrey;
+    height: 10vh;
+    border: 2px solid #2aabee;
+
+
+}
+/* Footer */
+
+/* index */
+.post-content {
+
+}
+

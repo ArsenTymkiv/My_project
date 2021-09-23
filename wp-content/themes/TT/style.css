@@ -1,0 +1,20 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+header{
+background: #ff4861;
+    padding: 40px;
+}
+main{
+    display: flex;
+    justify-content: center;
+    height: 75vh;
+
+
+}
+footer{
+    background: #8744ff;
+    padding: 40px;
+}

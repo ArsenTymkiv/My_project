@@ -21,4 +21,11 @@
     'mid_size' => 4,
     'end_size' => 2,
 ));?>
+
+
+
+
 <?php get_footer();?>
+
+
+

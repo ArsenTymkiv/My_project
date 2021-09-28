@@ -24,6 +24,7 @@ if (function_exists('register_sidebar')){
         'after_title'   => '</h5><div class="card-body">',
     ));
 }
+
 //поддержка миниатюр в записях.
 add_theme_support('post-thumbnails');
 //регистрируем меню
@@ -70,7 +71,7 @@ function text_single_product_summary(){
 
 add_shortcode('number', 'show_number');
 function show_number(){
-    return ' +(380)123-45-67';
+    return "<a href=\"/\"> +(380)123-45-67</a>";
 }
 
 

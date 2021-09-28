@@ -1,6 +1,8 @@
 </div>
-<div class="col-md-4 sidebar">
-    <?dynamic_sidebar();?>
+<div class="col-md-4 sidebar 33333333333">
+
+    <?php dynamic_sidebar();?>
+
     </main>
     <footer class="py-3 bg-dark">
         <div class="container">

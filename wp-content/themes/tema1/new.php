@@ -1,8 +1,11 @@
+
 <?php
 /**
  * Template Name: Custom
  */
+
 get_header(); ?>
+
     <div class="text_post">
         <h2><strong>Категорії постів:</strong><h2/>
 
@@ -20,11 +23,14 @@ $categories = get_categories($args);
 
 
 foreach($categories as $category) {
-    echo '<li>
+
+    echo '<div>
             <a href="' . get_term_link($category) . '" title="' . sprintf(__("View all posts in %s"), $category->name) . '" ' . '>' . $category->name . '</a>   
-         </li> ';
+         </div> ';
     echo '<p>'. $category->description .'</p>';
+
 }
+
 ?>
 
 
@@ -34,45 +40,41 @@ foreach($categories as $category) {
 
 
 
-
-
-
-
-    <div class="text_post">
-        <h2><strong>Категорії товарів:</strong><h2/>
-
-    </div>
 <?php
 /////////Категорії товарів
 
 
-$cat_args = array(
+$cat_args = get_terms( 'product_cat', array(
     'orderby'    => 'name',
     'order'      => 'asc',
-);
+    'hide_empty' => true
+));
 
 $product_categories = get_terms( 'product_cat', $cat_args );
-var_dump($product_categories);
+//var_dump($product_categories);
 if( !empty($product_categories) ){
-    echo '
- 
-<ul>';
-    foreach ($product_categories as $key => $category) {
-        echo '
- 
-<li>';
+
+    foreach ($product_categories as $category) {
+
+        echo '<div>';
         echo '<a href="'.get_term_link($category).'" >';
         echo $category->name;
         echo '</a>';
-        echo '</li>';
+        echo '</div>';
+        $cat_thumb_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
+        $shop_catalog_img = wp_get_attachment_image_src( $cat_thumb_id, 'shop_catalog' );
+        $term_link = get_term_link( $category, 'product_cat' );?>
+        <a href="<?php echo $term_link; ?>"><img src="<?php echo $shop_catalog_img[0]; ?>" alt="<?php echo $category->name; ?>" /></a>
+        <?php
     }
-    echo '</ul>
- 
- 
-';
+
+
+
+
+
+
+
 }
-
-
 /*
  $args = array(
     'post_type' => 'page'
@@ -222,7 +224,6 @@ $query = new WP_Query( $args ); ?>
 
 */
 ?>
-
 
 
 

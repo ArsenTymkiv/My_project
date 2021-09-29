@@ -3,7 +3,9 @@
 function it_blog_style_frontend() {
 wp_enqueue_style('bootstrap', get_stylesheet_directory_uri() . '/css/bootstrap.min.css');
 wp_enqueue_style('styles', get_stylesheet_directory_uri() . '/css/style.css');
+
 }
+
 
 add_action('wp_enqueue_scripts', 'it_blog_style_frontend');
 function it_blog_include_myscript(){

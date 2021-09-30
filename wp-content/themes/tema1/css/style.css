@@ -24,25 +24,43 @@ margin-top: 2px; /* Отступ сверху */
 float: top; /* Состыковка колонок по горизонтали */
 }
 
-.posts_category {
-    border: 2px solid #55c5e9; /* Рамка вокруг фотографии */
-    padding: 15px; /* Расстояние от картинки до рамки */
-    background: #666; /* Цвет фона */
-    margin-right: 10px; /* Отступ справа */
-    margin-bottom: 10px; /* Отступ снизу */
-}
 
 .wr {
-    width: 30%;
+    width: 49%;
     display: inline-block;
     float: left;
-    margin-right: 130px;
-    margin-bottom: 5px;
+    margin-right: 5px; /* Отступ справа */
+    margin-bottom: 5px; /* Отступ снизу */
 
 }
 img.img_cat {
-    width: 100%;
+    width: 63%;
 }
 .text_cat {
 float: right;
+padding: 5px;
+border: 1px solid black;
+}
+
+
+.blue {
+    background: blue;
+}
+
+.red {
+    background: red;
+}
+
+.buttonProps {
+    text-align: center;
+    font-size: 20px;
+    color: white;
+    margin: 50px;
+    height: 50px;
+    border-radius: 5px;
+    border-style: none;
+}
+
+.center {
+    text-align: center;
 }

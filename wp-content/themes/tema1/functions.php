@@ -11,6 +11,7 @@ add_action('wp_enqueue_scripts', 'it_blog_style_frontend');
 function it_blog_include_myscript(){
 wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.3.1.slim.min.js', '', '1.0', false);
 wp_enqueue_script('bootstrap', get_stylesheet_directory_uri() . '/js/bootstrap.min.js', '', '1.0', false);
+wp_enqueue_script('java', get_stylesheet_directory_uri() . '/js/java.js', '', '1.0', false);
 }
 
 add_action('wp_enqueue_scripts', 'it_blog_include_myscript');

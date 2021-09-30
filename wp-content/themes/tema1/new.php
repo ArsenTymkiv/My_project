@@ -4,9 +4,10 @@
  * Template Name: Custom
  */
 
+
 get_header(); ?>
 
-        <h2><strong>Категорії постів:</strong></h2>
+        <h3><strong>Категорії постів:</strong></h3>
 
 
 <?php
@@ -33,16 +34,17 @@ foreach($categories as $category) {
 
 ?>
 
+<br><br/>
+<div class="center">
+    <button id="btn1" class="buttonProps blue" onclick="toggleColor()">classList.toggle()</button>
+</div>
+
+<br><br/>
 
 
 
 
-
-
-
-
-
-            <h2><strong>Категорії товарів:</strong></h2>
+            <h3><strong>Категорії товарів:</strong></h3>
 
 
 <?php
@@ -64,15 +66,15 @@ if( !empty($product_categories) ){
         $shop_catalog_img = wp_get_attachment_image_src( $cat_thumb_id, 'shop_catalog' );
         $term_link = get_term_link( $category, 'product_cat' );?>
      <div class="wr">
-        <a href="<?php //echo get_term_link($category); ?>"><img class="img_cat" src="<?php echo $shop_catalog_img[0]; ?>" alt="<?php //echo $category->name; ?>" /></a>
+        <a href="<?php echo get_term_link($category); ?>"><img class="img_cat" src="<?php echo $shop_catalog_img[0]; ?>" alt="<?php echo $category->name; ?>" /></a>
 
          <?php
 
-      // echo '<div class="text_cat">';
+       echo '<div class="text_cat">';
        echo '<a href=.get_term_link($category). >';
        echo $category->name;
         echo '</a>';
-        //echo '</div>';
+        echo '</div>';
               ?> </div> <?php
     }
 

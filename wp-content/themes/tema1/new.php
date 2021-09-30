@@ -6,10 +6,8 @@
 
 get_header(); ?>
 
-    <div class="text_post">
-        <h2><strong>Категорії постів:</strong><h2/>
+        <h2><strong>Категорії постів:</strong></h2>
 
-    </div>
 
 <?php
 /////////Категорії постів
@@ -24,10 +22,12 @@ $categories = get_categories($args);
 
 foreach($categories as $category) {
 
-    echo '<div>
-            <a href="' . get_term_link($category) . '" title="' . sprintf(__("View all posts in %s"), $category->name) . '" ' . '>' . $category->name . '</a>   
-         </div> ';
-    echo '<p>'. $category->description .'</p>';
+    echo '<div class="description">';
+        echo '<a href="' . get_term_link($category) . '" title="' . sprintf(__("View all posts in %s"), $category->name) . '" ' . '>' . $category->name . '</a><p>'. $category->description .'</p>';
+    echo '</div>';
+
+    //echo '<p>'. $category->description .'</p>';
+
 
 }
 
@@ -41,10 +41,10 @@ foreach($categories as $category) {
 
 
 
-        <div class="text_post">
-            <h2><strong>Категорії товарів:</strong><h2/>
 
-        </div>
+            <h2><strong>Категорії товарів:</strong></h2>
+
+
 <?php
 /////////Категорії товарів
 
@@ -63,15 +63,17 @@ if( !empty($product_categories) ){
         $cat_thumb_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
         $shop_catalog_img = wp_get_attachment_image_src( $cat_thumb_id, 'shop_catalog' );
         $term_link = get_term_link( $category, 'product_cat' );?>
-        <a href="<?php echo $term_link; ?>"><img src="<?php echo $shop_catalog_img[0]; ?>" alt="<?php echo $category->name; ?>" /></a>
-        <?php
+     <div class="wr">
+        <a href="<?php //echo get_term_link($category); ?>"><img class="img_cat" src="<?php echo $shop_catalog_img[0]; ?>" alt="<?php //echo $category->name; ?>" /></a>
 
-        echo '<div>';
-        echo '<a href=.get_term_link($category). >';
-        echo $category->name;
+         <?php
+
+      // echo '<div class="text_cat">';
+       echo '<a href=.get_term_link($category). >';
+       echo $category->name;
         echo '</a>';
-        echo '</div>';
-
+        //echo '</div>';
+              ?> </div> <?php
     }
 
 

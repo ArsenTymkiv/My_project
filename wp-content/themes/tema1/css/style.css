@@ -14,3 +14,35 @@ a:hover {
     color: rgba(138, 32, 37, 0.91); /* Цвет ссылки при наведении на нее курсора мыши */
     text-decoration: underline; /* Добавляем подчеркивание */
 }
+
+.description{
+font-size: 100%; /* Размер шрифта */
+color: #000000; /* Цвет текста заголовка */
+padding: 10px; /* Поля вокруг текста */
+border: 1px solid black; /* Рамка вокруг слоя */
+margin-top: 2px; /* Отступ сверху */
+float: top; /* Состыковка колонок по горизонтали */
+}
+
+.posts_category {
+    border: 2px solid #55c5e9; /* Рамка вокруг фотографии */
+    padding: 15px; /* Расстояние от картинки до рамки */
+    background: #666; /* Цвет фона */
+    margin-right: 10px; /* Отступ справа */
+    margin-bottom: 10px; /* Отступ снизу */
+}
+
+.wr {
+    width: 30%;
+    display: inline-block;
+    float: left;
+    margin-right: 130px;
+    margin-bottom: 5px;
+
+}
+img.img_cat {
+    width: 100%;
+}
+.text_cat {
+float: right;
+}

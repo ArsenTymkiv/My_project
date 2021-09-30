@@ -40,6 +40,11 @@ foreach($categories as $category) {
 
 
 
+
+        <div class="text_post">
+            <h2><strong>Категорії товарів:</strong><h2/>
+
+        </div>
 <?php
 /////////Категорії товарів
 
@@ -55,17 +60,18 @@ $product_categories = get_terms( 'product_cat', $cat_args );
 if( !empty($product_categories) ){
 
     foreach ($product_categories as $category) {
-
-        echo '<div>';
-        echo '<a href="'.get_term_link($category).'" >';
-        echo $category->name;
-        echo '</a>';
-        echo '</div>';
         $cat_thumb_id = get_term_meta( $category->term_id, 'thumbnail_id', true );
         $shop_catalog_img = wp_get_attachment_image_src( $cat_thumb_id, 'shop_catalog' );
         $term_link = get_term_link( $category, 'product_cat' );?>
         <a href="<?php echo $term_link; ?>"><img src="<?php echo $shop_catalog_img[0]; ?>" alt="<?php echo $category->name; ?>" /></a>
         <?php
+
+        echo '<div>';
+        echo '<a href=.get_term_link($category). >';
+        echo $category->name;
+        echo '</a>';
+        echo '</div>';
+
     }
 
 

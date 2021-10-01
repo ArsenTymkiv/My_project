@@ -33,12 +33,12 @@ foreach($categories as $category) {
 }
 
 ?>
-
 <br><br/>
-<div class="center">
-    <button id="btn1" class="buttonProps blue" onclick="toggleColor()">classList.toggle()</button>
-</div>
-
+<div id="submit_div" class="form__link"> Link category </div>
+<div id="position_button"><p>Link src:</p></div>
+<br><br/>
+<br><br/>
+<div id="submit_div" class="form__controlmy"> Add border </div>
 <br><br/>
 
 
@@ -234,6 +234,7 @@ $query = new WP_Query( $args ); ?>
 
 */
 ?>
+
 
 
 

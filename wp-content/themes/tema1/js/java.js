@@ -1,5 +1,7 @@
 jQuery(document).ready(function () {
     console.log("ready!123");
+
+                                  /*  ADD BORDER */
     jQuery("body").on("click", ".form__controlmy", function () {
         var name = jQuery(this).text();
         console.log(name);
@@ -13,6 +15,8 @@ jQuery(document).ready(function () {
     });
 
 
+                                /* REMOVE BORDER */
+
     jQuery("body").on("click", ".img_border", function () {
         var name = jQuery(this).text();
         console.log(name);
@@ -20,6 +24,7 @@ jQuery(document).ready(function () {
 
     });
 
+                                  /* ADD PHOTO */
 
     jQuery("body").on("click", ".form__link", function () {
         var name = jQuery(this).text();
@@ -28,12 +33,18 @@ jQuery(document).ready(function () {
 
         jQuery('.img_cat').each(function () {
             var src = jQuery(this).attr('src');
-            jQuery('#position_button').append(src);
+            jQuery('#position_button').append('<img src="'+src+'">');
         });
 
 
     });
+                                 /* TABS  */
+    jQuery("body").on("click", ".tabs", function () {
+        var name = jQuery(this).text();
+        console.log(name);
 
+
+    });
 
 });
 

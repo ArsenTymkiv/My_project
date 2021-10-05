@@ -1,5 +1,5 @@
 jQuery(document).ready(function () {
-    console.log("ready!123");
+    console.log("ready!1233333");
 
                                   /*  ADD BORDER */
     jQuery("body").on("click", ".form__controlmy", function () {
@@ -39,14 +39,22 @@ jQuery(document).ready(function () {
 
     });
                                  /* TABS  */
-    jQuery("body").on("click", ".tabs", function () {
-        var name = jQuery(this).text();
-        console.log(name);
 
+    jQuery('div.b2').hide();
+    jQuery('div.b3').hide();
+    jQuery('div.b4').hide();
+        jQuery('div.class.class1 span').click(function(){
+            var thisClass = this.className.split(' ',1);
+            //var thisClass = this.className.slice(0,2);
+            jQuery('div.b1').hide();
+            jQuery('div.b2').hide();
+            jQuery('div.b3').hide();
+            jQuery('div.b4').hide();
+            jQuery('div.' + thisClass).show();
+
+        });
 
     });
-
-});
 
 
 

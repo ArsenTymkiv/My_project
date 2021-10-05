@@ -6,6 +6,7 @@
 
 get_header(); ?>
 
+
     <h3><strong>Категорії постів:</strong></h3>
 
 
@@ -32,19 +33,36 @@ foreach ($categories as $category) {
 }
 
 ?>
+
+
     <br><br/>
-    <div class="tabs">
-        <span class="tab">Tab 1</span>
-        <span class="tab">Tab 2</span>
-
+    <div class="class">
     </div>
+
+        <div class="class class1">
+            <span class="b1 tab"><a>Tab 1</a></span>
+            <span class="b2 tab"><a>Tab 2</a></span>
+            <span class="b3 tab"><a>Tab 3</a></span>
+            <span class="b4 tab"><a>Tab 4</a></span>
+        </div>
+
     <br><br/>
-    <div class="content_tabs">
-        <div class="text_tab1">1111111111111111</div>
-        <div class="text_tab2">2222222222222222</div>
-
-
+<div class="container-tabs">
+    <div class="b1 content-tab">
+        Перша владка
     </div>
+    <div class="b2 content-tab">
+        Друга вкладка
+    </div>
+    <div class="b3 content-tab">
+        Третя вкладка
+    </div>
+    <div class="b4 content-tab">
+        Четверта вкладка
+    </div>
+</div>
+    <br><br/>
+
 
     <br><br/>
     <div id="submit_div" class="form__link css_class"><a> Photo category </a></div>

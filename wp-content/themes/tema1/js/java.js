@@ -43,7 +43,11 @@ jQuery(document).ready(function () {
     jQuery('div.b2').hide();
     jQuery('div.b3').hide();
     jQuery('div.b4').hide();
+
         jQuery('div.class.class1 span').click(function(){
+            jQuery('.content-tab').each(function(index){
+                console.log('Индекс: ' + index);
+            });
             var thisClass = this.className.split(' ',1);
             //var thisClass = this.className.slice(0,2);
             jQuery('div.b1').hide();
